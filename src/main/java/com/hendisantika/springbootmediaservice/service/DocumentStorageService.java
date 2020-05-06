@@ -95,5 +95,9 @@ public class DocumentStorageService {
         }
     }
 
+    public String getDocumentName(Integer userId, String docType) {
+        return docStorageRepo.getUploadDocumentPath(userId, docType);
+    }
+
 
 }
