@@ -6,6 +6,7 @@ import com.hendisantika.springbootmediaservice.repository.DocumentStoragePropert
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,6 +27,7 @@ import java.nio.file.StandardCopyOption;
  * Date: 06/05/20
  * Time: 09.38
  */
+@Service
 public class DocumentStorageService {
     private final Path fileStorageLocation;
 
