@@ -28,25 +28,25 @@ import java.io.IOException;
  * Time: 09.50
  */
 @RestController
-@RequestMapping(value = "api")
+@RequestMapping(value = "api/files")
 public class DocumentController {
     @Autowired
     private DocumentStorageService documentStorageService;
 
-    @PostMapping("uploadFile")
+    @PostMapping("upload")
     public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file,
                                          @RequestParam("userId") Integer UserId,
                                          @RequestParam("docType") String docType) {
         String fileName = documentStorageService.storeFile(file, UserId, docType);
         String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/downloadFile/")
+                .path("/download/")
                 .path(fileName)
                 .toUriString();
         return new UploadFileResponse(fileName, fileDownloadUri,
                 file.getContentType(), file.getSize());
     }
 
-    @GetMapping("/downloadFile")
+    @GetMapping("/download")
     public ResponseEntity<Resource> downloadFile(@RequestParam("userId") Integer userId,
                                                  @RequestParam("docType") String docType,
                                                  HttpServletRequest request) {
