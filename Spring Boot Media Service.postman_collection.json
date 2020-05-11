@@ -1,0 +1,123 @@
+{
+  "info": {
+    "_postman_id": "682ca0e3-a50b-45df-89ef-d34a20461acf",
+    "name": "Spring Boot Media Service",
+    "description": "Spring Boot Media Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Post request to upload a file",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "naruto",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "naruto",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/Users/hendisantika/Desktop/blank.png"
+            },
+            {
+              "key": "userId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "docType",
+              "value": "License",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/files/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "files",
+            "upload"
+          ]
+        },
+        "description": "Post request to upload a file"
+      },
+      "response": []
+    },
+    {
+      "name": "GET request to download the file",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "naruto",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "naruto",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "userId",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "docType",
+              "value": "png",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/files/download",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "files",
+            "download"
+          ]
+        },
+        "description": "GET request to download the file"
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
