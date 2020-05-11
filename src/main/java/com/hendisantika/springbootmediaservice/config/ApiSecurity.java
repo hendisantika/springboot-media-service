@@ -35,8 +35,8 @@ public class ApiSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
-        authenticationMgr.inMemoryAuthentication().withUser("username")
-                .password("$6y$13$9OzrtK7X4mad/te8m7uhysjfaihjsdfZdJ/fDZFaOJjrfFbYzYtzky").roles("ADMIN");
+        authenticationMgr.inMemoryAuthentication().withUser("naruto")
+                .password("$2y$12$6ivb/7i8fEd9arf0EAQbqOU0f17fH4ItGVZ5RjS90gUme7ufZehfm").roles("ADMIN");
     }
 
 }
