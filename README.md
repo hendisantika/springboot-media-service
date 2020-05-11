@@ -15,3 +15,5 @@ So the controller has two mappings:
         Request URL: /api/files/download
         Request Parameters: userId and docType
         Response: Will return the file in attachment along with content-type and other details. (If file not found for that user it will return 404 Not found code)
+
+In order to secure your API with Spring Basic Auth add below the class. Update the required user name and password (use [online BCrypt encoder](https://bcrypt-generator.com/) to encode your password).
