@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,6 +22,7 @@ import javax.persistence.Table;
  * Date: 06/05/20
  * Time: 09.31
  */
+@Configuration
 @ConfigurationProperties(prefix = "file")
 @Entity
 @Table(name = "merchant_documents")

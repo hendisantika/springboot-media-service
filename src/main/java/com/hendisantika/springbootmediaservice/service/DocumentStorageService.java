@@ -34,6 +34,7 @@ public class DocumentStorageService {
     @Autowired
     private DocumentStoragePropertiesRepository docStorageRepo;
 
+    @Autowired
     public DocumentStorageService(DocumentStorageProperties fileStorageProperties) {
         this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDir()).toAbsolutePath().normalize();
         try {
