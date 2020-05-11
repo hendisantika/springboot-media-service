@@ -30,3 +30,16 @@ MariaDB [merchant]> select * from merchant_documents;
 2 rows in set (0.006 sec)
 
 ```
+
+### Screen shot
+Upload a Document
+
+![Upload a Document](img/upload1.png "Upload a Document")
+
+![Upload a Document](img/upload2.png "Upload a Document")
+
+Download a Document
+
+![Download a Document](img/download1.png "Download a Document")
+
+![Download a Document](img/download2.png "Download a Document")
