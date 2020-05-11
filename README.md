@@ -17,3 +17,16 @@ So the controller has two mappings:
         Response: Will return the file in attachment along with content-type and other details. (If file not found for that user it will return 404 Not found code)
 
 In order to secure your API with Spring Basic Auth add below the class. Update the required user name and password (use [online BCrypt encoder](https://bcrypt-generator.com/) to encode your password).
+
+SQL Console:
+```sql
+MariaDB [merchant]> select * from merchant_documents;
++-------------+---------+-----------------+---------------+---------------+------------+
+| document_id | user_id | document_format | document_type | file_name     | upload_dir |
++-------------+---------+-----------------+---------------+---------------+------------+
+|           1 |       1 | image/png       | License       | 1_License.png | NULL       |
+|           2 |       1 | image/png       | png           | 1_png.png     | NULL       |
++-------------+---------+-----------------+---------------+---------------+------------+
+2 rows in set (0.006 sec)
+
+```
